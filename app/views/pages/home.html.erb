@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <%= simple_form_for :article, url: scrape_articles_path, method: :get do |f| %>
+    <%= f.submit "Scrape", class: "btn-primary" %>
+  <% end %>
+
+  <div class="weekly-top-20">
+    <h4>Top 20 Words of the Week</h4>
+
+  </div>
+
+  <div class="recent-articles">
+    <h4>Recent Articles</h4>
+    <div class="recent-articles-cards">
+      <% if @results.nil? %>
+        <% @recent_articles.each do |article| %>
+          <div class="article-card">
+            <p><%= link_to article.headline, article.url, class: 'outside-link' %></p>
+
+          </div>
+        <% end %>
+      <% else %>
+        <% @results[0..10].each do |article| %>
+          <div class="article-card">
+            <p><%= article.headline %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

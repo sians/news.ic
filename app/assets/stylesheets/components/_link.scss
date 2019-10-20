@@ -1,0 +1,20 @@
+a.outside-link {
+  text-decoration: none;
+  color: black;
+  padding: 0px 3px;
+  background-image: -webkit-linear-gradient(left, #2196f380 75%, transparent 75%);
+  background-image: -o-linear-gradient(left, #2196f380 75%, transparent 75%);
+  background-image: linear-gradient(to right, #2196f380 75%, transparent 75%);
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 14px 3px;
+}
+
+a.outside-link:hover {
+  text-decoration: none;
+  background-color: $links;
+  color: black;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+}

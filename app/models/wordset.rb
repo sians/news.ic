@@ -1,0 +1,2 @@
+class Wordset < ApplicationRecord
+end
