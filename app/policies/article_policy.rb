@@ -3,13 +3,17 @@ class ArticlePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def index?
-      true
-    end
+  def index?
+    true
+  end
 
-    def scrape_articles?
-      true
-    end
+  def show?
+    true
+  end
+
+  def scrape_articles?
+    true
   end
 end

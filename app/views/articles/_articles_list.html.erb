@@ -1,0 +1,11 @@
+    <% @articles.each do |article| %>
+      <li>
+        <%#= link_to article_path(article) do %>
+          <%#= article.headline %>
+        <%# end %>
+
+        <%= link_to (url_for(article_path(article))), :remote => true do %>
+          <%= article.headline %>
+        <% end %>
+      </li>
+    <% end %>

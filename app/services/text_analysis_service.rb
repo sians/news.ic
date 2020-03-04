@@ -1,6 +1,6 @@
 class TextAnalysisService
   def initialize
-    @noise = "in is of at a as the it be that for of by on to and if you was into who his amid yet we why are so with my how up from - have"
+    @noise = "in is of at a as the it be that for of by on to and if you was into who his amid yet we why are so with my how up from - have will but your new"
   end
 
   def top_freq_by_word(num, word_hash)

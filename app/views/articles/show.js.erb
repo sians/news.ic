@@ -1,0 +1,30 @@
+console.log("heelolo")
+
+function handleListArticles() {
+  const articlesList = document.querySelector('#article-list')
+  const card = document.querySelector('#card')
+
+  const showDisplay = document.querySelector('#show-display')
+  if (showDisplay) {
+    const button = document.querySelector('#handle-list-articles')
+    button.addEventListener('click', event => {
+      articlesList.style.display = 'block'
+      card.style.display = 'none'
+    })
+  }
+}
+
+function addCard(innerHTML) {
+  const articlesList = document.querySelector('#article-list')
+  const card = document.querySelector('#card')
+
+  articlesList.style.display = "none"
+  card.style.display = "block"
+  card.innerHTML = innerHTML
+  handleListArticles();
+}
+
+<% if @article %>
+  addCard('<%= j render "articles/show", article: @article %>')
+<% end %>
+

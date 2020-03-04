@@ -5,11 +5,11 @@ class PagesController < ApplicationController
 
   def home
     @recent_articles = Article.order(created_at: :desc)[0..10]
-    text_analyser = TextAnalysisService.new
-    @wf = text_analyser.weekly_word_frequency
-    top_20 = text_analyser.top_freq_by_word(20, @wf)
-    @country_articles = text_analyser.country_occurance(Article.all)
-    text_analyser.top_5_freq_by_freq(@wf)
+    # text_analyser = TextAnalysisService.new
+    # @wf = text_analyser.weekly_word_frequency
+    # top_20 = text_analyser.top_freq_by_word(20, @wf)
+    # @country_articles = text_analyser.country_occurance(Article.all)
+    # text_analyser.top_5_freq_by_freq(@wf)
 
   end
 
